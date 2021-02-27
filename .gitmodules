@@ -1,0 +1,7 @@
+[submodule "school-be"]
+	path = school-be
+	url = git@github.com:mebonilla9/school-be.git
+	
+[submodule "school-fe"]
+	path = school-be
+	url = git@github.com:mebonilla9/school-fe.git
