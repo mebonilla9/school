@@ -80,6 +80,9 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# data folder volume for mongodb container
+data/*
+
 # Windows shortcuts
 *.lnk
 

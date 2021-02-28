@@ -1,1 +1,20 @@
 version: '3.7'
+networks:
+  sh-network:
+    driver: bridge
+services:
+  mongo:
+    image: mongo:4.4.4
+    container_name: mongo-db
+    restart: always
+    ports:
+      - "27017:27017"
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Abcd123456!
+      MONGO_INITDB_ROOT_DATABASE: schooldb
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./data/mongo:/data/db
+    networks:
+      - sh-network
