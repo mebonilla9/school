@@ -18,3 +18,21 @@ services:
       - ./data/mongo:/data/db
     networks:
       - sh-network
+  spring:
+    build: 
+      context: .
+      dockerfile: spring.Dockerfile
+    container_name: spring-be
+    environment:
+      DATABASE_HOST: mongo-db
+      DATABASE_PORT: 27017
+      DATABASE_NAME: schooldb
+      DATABASE_USER: school_user
+      DATABASE_PWD: School_pwd
+    tty: true
+    ports: 
+      - 8080:8080
+    depends_on: 
+      - mongo
+    networks: 
+      - sh-network
