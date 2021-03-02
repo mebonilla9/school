@@ -1,8 +1,8 @@
 print('################### Start creating database ###################');
 db = db.getSiblingDB('schooldb');
 db.createUser({
-  user: 'school_user',
-  pwd: 'School_pwd',
+  user: 'schooluser',
+  pwd: 'schoolpwd',
   roles: [{
     role: 'readWrite',
     db: 'schooldb'
