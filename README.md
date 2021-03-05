@@ -8,7 +8,7 @@ After clone this repository you need execute this command to clone the git submo
 
 Use this command to clone the modules
 
-```
+```docker
 git submodule update --init --recursive
 ```
 
@@ -18,7 +18,7 @@ This project use Docker to setup the production stage and mongo db images to per
 
 To deploy the environment use docker-compose with the command below:
 
-```
+```docker
 docker-compose up --build
 ```
 
