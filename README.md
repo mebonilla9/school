@@ -23,7 +23,7 @@ docker-compose up --build
 ```
 
 ## Grettings
-To my partner AKA "la patroncita"!
+To my partner AKA "la patroncita"! [Valentina Rendon](https://github.com/valentina102)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
