@@ -36,3 +36,16 @@ services:
       - mongo
     networks: 
       - sh-network
+  nginx:
+    build:
+      context: .
+      dockerfile: quasar.Dockerfile
+    container_name: quasar-fe
+    tty: true
+    ports:
+      - 80:80
+    depends_on:
+      - mongo
+      - spring
+    networks:
+      - sh-network
